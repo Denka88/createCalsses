@@ -1,12 +1,28 @@
 public class Main {
     public static void main(String[] args) {
 
-        Vector firstVector = new Vector(2, 2, 2);
-        Vector secondVector = new Vector(2, 2, 2);
+        Vector firstVector = new Vector(1, 2, 3);
+        Vector secondVector = new Vector(4, 5, 6);
 
-        System.out.println(secondVector.lengthVector());
+//        Выводим координаты векторов
+        System.out.println(firstVector);
         System.out.println(secondVector);
-        System.out.println(Vector.scalar(firstVector, secondVector));
 
+//        Выводим длины векторов
+        System.out.println("Длина вектора: " + firstVector.lengthVector());
+        System.out.println("Длина вектора: " + secondVector.lengthVector());
+        
+//        Скалярное произведение
+        System.out.println("Скалярное произведение: " + Vector.scalar(firstVector, secondVector));
+        
+//        Векторное произведение
+        System.out.println("Векторное произведение ");
+        System.out.println(Vector.vectorMult(firstVector, secondVector));
+        
+//        Сумма векторов
+        Vector.sumVector(firstVector, secondVector);
+        
+//        Разность векторов
+        Vector.diffVector(firstVector, secondVector);
     }
 }

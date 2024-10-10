@@ -39,16 +39,27 @@ public class Vector {
     }
 
 
-    //    Длина вектора Задача 1
+    /**
+     *Метод для вычисления длины вектора
+     * 
+     * @return Возвращает длину вектора
+     */
     public int lengthVector() {
 
         return (int) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
 
     }
 
-    public static String scalar(Vector first, Vector second) {
-        System.out.printf("Vector{%d, %d, %d}", first.getX(), first.getY(), first.getZ());
-        return "Vector scalar{ " + first.getX() * second.getX() + first.getY() * second.getY() + first.getZ() * second.getZ() + "}";
+    /**
+     * Метод для вычисления скалаярного произведения двух векторов
+     * 
+     * @param first Первый вектор
+     * @param second Второй вектор
+     * @return Возвращает скалярное произвеедение двух векторов
+     */
+    public static int scalar(Vector first, Vector second) {
+        
+        return first.getX() * second.getX() + first.getY() * second.getY() + first.getZ() * second.getZ();
 
     }
 
@@ -59,22 +70,40 @@ public class Vector {
      * @param second Второй вектор
      * @return Возврпает векторное произведение двух векторов
      */
-    public Vector vectorMult(Vector first, Vector second) {
+    public static Vector vectorMult(Vector first, Vector second) {
 
         int a = first.getY() * second.getZ() - first.getZ() * second.getY();
         int b = first.getZ() * second.getX() - first.getX() * second.getZ();
         int c = first.getX() * second.getY() - first.getY() * second.getX();
 
-        System.out.printf(new Vector(a, b, c) + "Vector{%d, %d, %d}", a, b, c);
-
         return new Vector(a, b, c);
+
+    }
+    
+    public static void sumVector(Vector first, Vector second) {
+        
+        int sumX = first.getX() + second.getX();
+        int sumY = first.getY() + second.getY();
+        int sumZ = first.getZ() + second.getZ();
+
+        System.out.println("Сумма векторов: " + sumX + ", " + sumY + ", " + sumZ);
+        
+    }
+
+    public static void diffVector(Vector first, Vector second) {
+
+        int diffX = first.getX() - second.getX();
+        int diffY = first.getY() - second.getY();
+        int diffZ = first.getZ() - second.getZ();
+
+        System.out.println("Разность векторов: " + diffX + ", " + diffY + ", " + diffZ);
 
     }
 
 
     @Override
     public String toString() {
-        return "Vector{" +
+        return "Vector {" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +
