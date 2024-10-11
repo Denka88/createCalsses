@@ -24,5 +24,7 @@ public class Main {
         
 //        Разность векторов
         Vector.diffVector(firstVector, secondVector);
+
+        Vector.cos();
     }
 }

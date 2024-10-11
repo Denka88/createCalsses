@@ -100,6 +100,17 @@ public class Vector {
 
     }
 
+    /**
+     *Метод для вычисления длины вектора
+     *
+     * @return Возвращает длину вектора
+     */
+    public static int cos(Vector first, Vector second) {
+
+        return scalar(first, second) / (first.lengthVector() * second.lengthVector());
+
+    }
+
 
     @Override
     public String toString() {
