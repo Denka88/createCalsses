@@ -101,13 +101,14 @@ public class Vector {
     }
 
     /**
-     *Метод для вычисления длины вектора
+     * Метод для вычисления длины вектора
      *
      * @return Возвращает длину вектора
      */
-    public static int cos(Vector first, Vector second) {
+    public static void cos(Vector first, Vector second) {
 
-        return scalar(first, second) / (first.lengthVector() * second.lengthVector());
+        double cosTheta = (double) scalar(first, second) / (Math.abs(first.lengthVector()) * Math.abs(second.lengthVector()));
+        System.out.println(cosTheta);
 
     }
 

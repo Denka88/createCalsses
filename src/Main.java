@@ -25,6 +25,8 @@ public class Main {
 //        Разность векторов
         Vector.diffVector(firstVector, secondVector);
 
-        Vector.cos();
+//        Угол между векторами
+        System.out.println("Угол между векторами: ");
+        Vector.cos(firstVector, secondVector);
     }
 }
